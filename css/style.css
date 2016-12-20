@@ -6,7 +6,6 @@ body {
   margin: 0 auto;
   width: 700px;
   height: 700px;
-  background-color: #2c3e50;
   color: #ecf0f1;
   font-family: Sans-Serif;
 }
@@ -14,6 +13,7 @@ body {
 #game-title {
   text-align: center;
   font-size: 30px;
+  margin: 5px;
 }
 
 #image-box {
@@ -23,31 +23,33 @@ body {
 }
 
 #message {
-  background-color: #9b59b6;
   width: 700px;
-  height: 100px;
+  padding: 5px;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 #list-group {
   list-style-type: none;
   margin: 0 auto;
-
 }
 
 #choices {
   margin: 0 auto;
   width: 500px;
   height: 55px;
-  font-size: 40px;
+  font-size: 30px;
   list-style-type: none;
 }
 
 .list-group-item {
   float: left;
   margin: 1%;
+  text-decoration: underline;
 }
 
 .list-group-item:hover {
   cursor: pointer;
-  text-decoration: underline;
+  color: #8e44ad;
 }

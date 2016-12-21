@@ -14,18 +14,37 @@
   </head>
   <body>
     <div id="container">
-      <h1 id="game-title">Mysterious Game</h1>
-      <img id="image-box" src="img/test-image.png" alt="Test Image" height="700" width="500">
+      <h1 id="game-title"></h1>
+      <img id="image-box" src="#" alt="Test Image" height="700" width="500">
       <div id="message">
-        <p>"Observo na tela do computador o código que acabo de criar..."<p>
+        <p></p>
       </div>
       <div id="choices">
         <ul id="list-group">
-          <li class="list-group-item">Ficar um tempo olhando a tela</li>
-          <li class="list-group-item">Ir embora</li>
         </ul>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/states.js"></script>
+    <script>
+      draw();
+
+      function draw(){
+        var li = '';
+        var currentState = state[currentStateId];
+        $("#game-title").text(currentState.title);
+        $("#image-box").attr('src','img/' + currentState.image + '.png');
+        $("#message").find("p").text('"' + currentState.message + '"');
+        $("#list-group").empty();
+
+        for (var i = 0; i < currentState.choices.length; i++){
+          li = '<li class="list-group-item" id="choice-' + i + '"> ' + currentState.choices[i].message + '</li>';
+          currentStateId = currentState.choices[i].nextstate;
+          $("#list-group").append(li);
+          $('#choice-' + i).click(function() { draw() });
+        }
+      }
+
+    </script>
   </body>
 </html>

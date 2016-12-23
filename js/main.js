@@ -3,7 +3,7 @@ $(document).ready(function() {
 });
 
 function start(){
-    update(0);
+    update('inicio');
 }
 
 function update(currentStateId){
@@ -31,7 +31,7 @@ function update(currentStateId){
   choicesLength = currentState.choices.length;
   for (i = 0; i < choicesLength; i++){
     choicesHtml += '<li class="list-group-item"' +
-    ' onclick="update(' + currentState.choices[i].nextstate + ')">' +
+    ' onclick="update(\'' + currentState.choices[i].nextstate + '\')">' +
     currentState.choices[i].message + '</li>';
   }
   html += '<div id="choices"><ul id="list-group">' +

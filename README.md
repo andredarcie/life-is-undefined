@@ -1,1 +1,1 @@
-# mysterious-game
+# Mysterious Game

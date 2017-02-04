@@ -1,2 +1,2 @@
 # Mysterious Game
-made in vuejs
+Made in vuejs

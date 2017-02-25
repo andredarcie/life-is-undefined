@@ -1,2 +1,2 @@
 # Mysterious Game
-Made in vuejs
+Made in [vuejs](https://vuejs.org/)
